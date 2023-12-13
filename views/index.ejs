@@ -1,11 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
-</html>
+<%- include("partials/header")%>
+  <%- include("partials/nav")%>
+
+<div class="pg1">
+  <div class="pg1-left"></div>
+
+  <div class="pg1-right">
+    <div class="logobox"></div>
+    <h1>Create Your Account</h1>
+
+    <form action="/createAccount" method="post">
+
+      <div class="user">
+        <span><i class="ri-user-fill"></i></span><input type="text" name="username" placeholder="Username">
+      </div>
+
+      <div class="email">
+        <span><i class="ri-mail-fill"></i></span> <input type="email" name="email" placeholder="Email">
+      </div>
+
+      <div class="phone">
+        <span><i class="ri-phone-fill"></i></span> <input type="number" name="number" placeholder="Phone +91">
+      </div>
+
+      
+    
+      <div class="passowrd">
+        <span><i class="ri-lock-password-fill"></i></span> <input type="password" name="password" placeholder="Password">
+      </div>
+    
+      <a href="/login" class="continuebtn">Continue</a>
+    </form>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+  <%- include("partials/footer")%>
+

@@ -1,0 +1,37 @@
+
+<%- include("partials/header")%>
+  <%- include("partials/nav")%>
+
+<div class="pg1">
+  <div class="pg1-left"></div>
+
+  <div class="pg1-right">
+    <div class="logobox"></div>
+    <h1>Create Your Account</h1>
+
+    <form action="/login" method="post" class="loginform">
+
+      <div class="user">
+        <span><i class="ri-user-fill"></i></span><input type="text" name="username" placeholder="Username">
+      </div>
+
+     
+      <div class="passowrd">
+        <span><i class="ri-lock-password-fill"></i></span> <input type="password" name="password" placeholder="Password">
+      </div>
+    
+      <a href="/chatroom" class="continuebtn">LogIn</a>
+    </form>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+  <%- include("partials/footer")%>
+
