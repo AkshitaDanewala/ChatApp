@@ -1,0 +1,62 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.formbox{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+}
+
+.formbox-left{
+    height: 100%;
+    width: 50%;
+    background-image: url("https://static4.depositphotos.com/1000507/461/i/450/depositphotos_4610285-stock-photo-3d-character-with-question-mark.jpg");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.formbox-right{
+    height: 100%;
+    width: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formbox-right >form{
+    height: 40vh;
+    width: 30vw;
+    /* background-color: pink; */
+}
+
+.formbox-right >form >h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vmax;
+}
+
+input{
+    margin-top: 2vmax;
+}
+
+.mailbtn{
+    padding: 0.6vmax 1vmax;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vmax;
+    font-size: 1.3vmax;
+    background-color: blue;
+    color: white;
+    border-radius: 0.5vmax;
+    border: none;
+    margin-top: 1vmax;
+}

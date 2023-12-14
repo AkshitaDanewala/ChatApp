@@ -105,7 +105,7 @@ border-radius: 5vmax;
     font-size: 1.6vmax;
   }
   .continuebtn{
-    padding: 0.6vmax 1vmax;
+    padding: 0.6vmax 1.3vmax;
     border-radius: 0.5vmax;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -113,4 +113,13 @@ border-radius: 5vmax;
     color: white;
     margin-top: 1vmax;
     text-decoration: none;
+    font-size: 1.4vmax;
+  }
+
+  .forgotbtn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vmax;
+    text-decoration: none;
+    color:darkblue;
+    margin-top: 1vmax;
   }

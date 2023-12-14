@@ -40,11 +40,22 @@ mix-blend-mode: multiply;
 
 
 <nav>
-   <div class="logocontent">
-      <div class="logo"></div>
-      <h1>Talks</h1>
-   </div>
+   
       
-
+   <% if(!admin){%>
+      <div class="logocontent">
+         <div class="logo"></div>
+         <h1>Talks</h1>
+      </div>
+   
+   <%}else{%>
+      <div class="logocontent">
+         <div class="logo"></div>
+         <h1>Talks</h1>
+      </div>
+   
+      <a href="/login">Logout</a>
+   
+   <%}%>
 
 </nav>

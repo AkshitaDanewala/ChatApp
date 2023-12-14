@@ -1,0 +1,30 @@
+
+<%- include("partials/header")%>
+  <%- include("partials/nav")%>
+  <link rel="stylesheet" href="/stylesheets/forgot.css">
+
+
+  <div class="formbox">
+
+    <div class="formbox-left"></div>
+
+    <div class="formbox-right">
+
+        <form action="/forgotpassword" method="POST">
+            <h1>Forgot Password</h1>
+            <input type="email" name="email" placeholder="Enter your Email">
+            <button class="mailbtn">Send Mail</button>
+        </form>
+        
+        
+        
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <%- include("partials/footer")%>
