@@ -121,5 +121,18 @@ border-radius: 5vmax;
     font-size: 1.3vmax;
     text-decoration: none;
     color:darkblue;
+    margin-top: 2vmax;
+    font-weight: bold;
+  }
+
+  .text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vmax;
     margin-top: 1vmax;
   }
+
+  .createbtn{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+  

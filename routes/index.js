@@ -48,7 +48,7 @@ router.post('/login', passport.authenticate("local", {
   res.render('forgot', {admin: req.user} );
 });
 
-router.post('/forgotpasswordt', async function(req, res, next) {
+router.post('/forgotpassword', async function(req, res, next) {
 try{
   const user = await Users.findOne({email: req.body.email})
   if(!user) return res.send("user not found")
@@ -93,16 +93,50 @@ function sendmail(req, res, user){
     console.log(info);
     user.forgotpassword = captcha
     user.save()
-   res.render("otp", {admin: req.user, email: user.email})
+   res.render("captcha", {admin: req.user, email: user.email})
   });
 }
 
 
-router.get('/captcha',  isloggedIn, function(req, res, next) {
-  res.render('captcha', {admin: req.user} );
+router.post('/captchamail/:email',  isloggedIn, async function(req, res, next) {
+
+  try{
+    const user = await Users.findOne({email: req.params.email})  
+    if(user.forgotpassword == req.body.captcha){
+      user.forgotpassword = -1
+      await user.save()
+  res.render('resetpassword', {admin: req.user, id: user._id, email: user.email} );
+    }else{
+      res.send("Invalid Captcha, Try Again <a href='/forget'>Forget Password</a>")
+    }
+  }catch(err){
+    res.send(err)
+  }
 });
+
+
+
+router.post('/resetpassword/:id',  isloggedIn, async function(req, res, next) {
+  try{
+    const user = await Users.findById(req.params.id)
+    await user.setPassword(req.body.password)
+    await user.save()
+    res.redirect("/login")
+  }catch(err){
+    res.send(err)
+  }
+});
+
+
+
 
 router.get('/chatroom',  isloggedIn, function(req, res, next) {
   res.render('chatroom', {admin: req.user} );
 });
+
+
+
+
+
+
 module.exports = router;

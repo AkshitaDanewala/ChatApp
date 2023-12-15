@@ -25,6 +25,24 @@ html,body{
     background-repeat: no-repeat;
 }
 
+.formbox-captcha{
+    height: 100%;
+    width: 50%;
+    background-image: url("https://thumbs.dreamstime.com/b/captcha-security-login-concept-big-word-text-team-people-modern-flat-style-vector-captcha-security-login-concept-167244885.jpg");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.resetimg{
+    height: 100%;
+    width: 50%;
+    background-image: url("https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto/fc/3021307-inline-fb-thumbsup-printpackaging.jpg");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .formbox-right{
     height: 100%;
     width: 50%;
