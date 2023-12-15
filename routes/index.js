@@ -130,8 +130,14 @@ router.post('/resetpassword/:id',  isloggedIn, async function(req, res, next) {
 
 
 
-router.get('/chatroom',  isloggedIn, function(req, res, next) {
-  res.render('chatroom', {admin: req.user} );
+router.get('/chatroom',  isloggedIn, async function(req, res, next) {
+
+  try{
+    const user = await Users.find()
+    res.render('chatroom', {admin: req.user, data: user} );
+  }catch(err){
+    res.send(err)
+  }
 });
 
 

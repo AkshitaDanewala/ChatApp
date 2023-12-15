@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.chatroom{
+    height: 90vh;
+    width: 100%;
+    /* background-color: pink; */
+    background-color: white;
+    display: flex;
+}
+
+.chatroom-left{
+    height: 100%;
+    width: 30%;
+    /* background-color: yellow; */
+}
+
+.chatroom-left >h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vmax;
+    text-align: center;
+    margin-top: 2vmax;
+}
+
+.chatroom-left >.users{
+    height: 79.7vh;
+    width: 100%;
+    /* background-color: cyan; */
+    overflow-y: auto;
+}
+.users::-webkit-scrollbar{
+    width: 0.6vmax;
+    border-radius: 1vmax;
+    background-color: black;
+}
+
+
+
+.users >.usersbox{
+    height: 10vh;
+    width: 99%;
+    background-color: rgb(77, 77, 77);
+    margin-top: 0.6vmax;
+}
+
+.users >.usersbox >h3{
+    font-family: Arial, Helvetica, sans-serif;
+padding: 1vmax 3vmax;  
+color: white;
+
+}
+
+.chatroom-right{
+    height: 100%;
+    width: 70%;
+    background-color: yellowgreen;
+}
+
+.namebox{
+    height: 10vh;
+    width: 100%;
+    background-color: pink;
+}

@@ -1,9 +1,38 @@
 
 <%- include("partials/header")%>
   <%- include("partials/nav")%>
+  <link rel="stylesheet" href="/stylesheets/chatroom.css">
 
 <div class="chatroom">
   
+<div class="chatroom-left">
+  <h1>Your Contacts</h1>
+  <hr>
+
+  <div class="users">
+
+    <% data.forEach(function(u){%>
+<div class="usersbox">
+<h3><%= u.username%></h3>
+</div>
+ <%})%>
+<hr>
+
+
+  </div>
+</div>
+
+
+<div class="chatroom-right">
+
+  <div class="namebox">
+    <h1 class="userName"><%= data.username%></h1>
+  </div>
+</div>
+
+
+
+
 </div>
 
   <%- include("partials/footer")%>
