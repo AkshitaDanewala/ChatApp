@@ -9,11 +9,11 @@
   <h1>Your Contacts</h1>
   <hr>
 
-  <div class="users">
+  <div  class="users">
 
     <% data.forEach(function(u){%>
-<div class="usersbox">
-<h3><%= u.username%></h3>
+<div  class="usersbox">
+<h3 ><%= u.username%></h3>
 </div>
  <%})%>
 <hr>
@@ -26,13 +26,47 @@
 <div class="chatroom-right">
 
   <div class="namebox">
-    <h1 class="userName"><%= data.username%></h1>
+    <h1  class="userName"></h1>
   </div>
+
+
+<div class="messagesbox">
+
+
+  <div class="incomingMsg msg">
+    <div class="username">Raj</div>
+    <div class="chats">cfgbjhnk</div>
+  </div>
+
+  <div class="outgoingMsg msg">
+    <div class="username">you</div>
+    <div class="chats">cfgbjhnkv</div>
+  </div>
+
+</div>
+
+<div class="inputs">
+  <input type="text" name="message" placeholder="Send Message" class="msginput">
+  <button>Send</button>
 </div>
 
 
 
+</div>
 
 </div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+
+
+    
+
+
+
+</script>
+
 
   <%- include("partials/footer")%>
