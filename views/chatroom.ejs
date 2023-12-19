@@ -32,22 +32,11 @@
 
 <div class="messagesbox">
 
-
-  <div class="incomingMsg msg">
-    <div class="username">Raj</div>
-    <div class="chats">cfgbjhnk</div>
-  </div>
-
-  <div class="outgoingMsg msg">
-    <div class="username">you</div>
-    <div class="chats">cfgbjhnkv</div>
-  </div>
-
 </div>
 
 <div class="inputs">
   <input type="text" name="message" placeholder="Send Message" class="msginput">
-  <button>Send</button>
+  <button onclick="sendMsg()">Send</button>
 </div>
 
 
@@ -62,9 +51,42 @@
     var socket = io();
 
 
-    
+    function incomingMsg(msg) {
+document.querySelector(".messagesbox").innerHTML += `<div class="incomingMsg msg">
+    <div class="username">${msg.username}</div>
+    <div class="chats">${msg.msg}</div>
+  </div>`
+    }
+
+    function outgoingMsg(msg){
+      document.querySelector(".messagesbox").innerHTML +=`<div class="outgoingMsg msg">
+    <div class="username">you</div>
+    <div class="chats">${msg}</div>
+  </div>`
+    }
 
 
+    function sendMsg(){
+      const inputmsg = document.querySelector("input").value
+
+
+      const msgpacket = {
+      username: username,
+      msg: inputmsg
+    }
+
+    outgoingMsg(msg)
+    socket.emit("sony", msgpacket)
+
+    document.querySelector("input").value = ""
+    }
+
+
+    socket.on("incomingMsg", (msg)=>{
+incomingMsg(msg)
+    })
+  
+   
 
 </script>
 
