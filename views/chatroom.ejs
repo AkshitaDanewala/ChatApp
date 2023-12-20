@@ -50,6 +50,7 @@
 <script>
     var socket = io();
 
+  
 
   
 
@@ -68,9 +69,10 @@ document.querySelector(".messagesbox").innerHTML += `<div class="incomingMsg msg
     }
 
 
-    function sendMsg(){
+   async function sendMsg(){
       const inputmsg = document.querySelector("input").value
 
+ 
 
       const msgpacket = {
       username: "username",
@@ -89,7 +91,9 @@ incomingMsg(msg)
     })
   
    
-
+//     var username = prompt("enter username")
+//         console.log(username)
+//  document.querySelector(".userName").innerHTML +=`${username}`
 
 </script>
 

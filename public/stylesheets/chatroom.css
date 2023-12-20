@@ -68,13 +68,19 @@ color: white;
     height: 10vh;
     width: 100%;
     background-color: pink;
+text-align: center;
 }
 
-
+.userName{
+font-size: 2vmax;
+font-family: Arial, Helvetica, sans-serif;
+padding-top: 1vmax;
+}
 .messagesbox{
     height: calc(83.5% - 3vmax);
     width: 100%;
     border: 2px solid black;
+    padding: 0 2vmax;
 }
 
 .msg{
@@ -87,7 +93,7 @@ color: white;
     font-synthesis: 1.3vmax;
     width: fit-content;
     margin-top: 2vmax;
-    margin-left: 2vmax;
+    /* margin-left: 2vmax; */
 }
 
 .outgoingMsg{

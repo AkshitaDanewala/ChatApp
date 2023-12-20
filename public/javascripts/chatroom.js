@@ -1,8 +1,12 @@
 
 var userName = document.querySelector(".userName")
-var userboxname = document.querySelector(".userboxname")
-var usersbox =  document.querySelector(".usersbox")
+var userboxname = document.querySelectorAll(".userboxname")
+// var usersbox =  document.querySelector(".usersbox")
+// var incomingMsg = document.querySelector(".incomingMsg")
 
-userboxname.addEventListener("click", async function(name){
-    userName.innerHTML = name.target.innerHTML
+userboxname.forEach(function(name){
+    name.addEventListener("click", function(n){
+        userName.innerHTML = n.target.innerHTML
+        // incomingMsg.innerHTML = n.target.innerHTML
+    })
 })
