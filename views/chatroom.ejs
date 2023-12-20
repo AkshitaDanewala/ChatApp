@@ -13,7 +13,7 @@
 
     <% data.forEach(function(u){%>
 <div  class="usersbox">
-<h3 ><%= u.username%></h3>
+<h3 class="userboxname"><%= u.username%></h3>
 </div>
  <%})%>
 <hr>
@@ -51,6 +51,8 @@
     var socket = io();
 
 
+  
+
     function incomingMsg(msg) {
 document.querySelector(".messagesbox").innerHTML += `<div class="incomingMsg msg">
     <div class="username">${msg.username}</div>
@@ -71,11 +73,11 @@ document.querySelector(".messagesbox").innerHTML += `<div class="incomingMsg msg
 
 
       const msgpacket = {
-      username: username,
+      username: "username",
       msg: inputmsg
     }
 
-    outgoingMsg(msg)
+    outgoingMsg(inputmsg)
     socket.emit("sony", msgpacket)
 
     document.querySelector("input").value = ""
@@ -88,7 +90,9 @@ incomingMsg(msg)
   
    
 
+
 </script>
 
-
+<!-- <script src="/socket.io/socket.io.js"></script> -->
+<script src="/javascripts/chatroom.js"></script>
   <%- include("partials/footer")%>
