@@ -41,8 +41,6 @@
   <button onclick="sendMsg()">Send</button>
 </div>
 
-
-
 </div>
 
 </div>
@@ -71,14 +69,14 @@ document.querySelector(".messagesbox").innerHTML += `<div class="incomingMsg msg
     }
 
 
-   async function sendMsg(){
+    function sendMsg(){
       const inputmsg = document.querySelector("input").value
 
- 
 
+//    
       const msgpacket = {
-      username: "username",
-      msg: inputmsg
+      username: "username" ,
+      msg: inputmsg,
     }
 
     outgoingMsg(inputmsg)
@@ -93,12 +91,22 @@ incomingMsg(msg)
     })
   
    
-//     var username = prompt("enter username")
-//         console.log(username)
-//  document.querySelector(".userName").innerHTML +=`${username}`
+   
 
 </script>
 
-<!-- <script src="/socket.io/socket.io.js"></script> -->
+<script>
+
+
+var userName = document.querySelector(".userName")
+var userboxname = document.querySelectorAll(".userboxname")
+userboxname.forEach(function(name){
+    name.addEventListener("click", function(n){
+        userName.innerHTML = n.target.innerHTML
+    })
+})
+
+</script>
+
 <script src="/javascripts/chatroom.js"></script>
   <%- include("partials/footer")%>
