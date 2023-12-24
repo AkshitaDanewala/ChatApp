@@ -11,7 +11,7 @@
 
   <div  class="users">
 
-    <% data.forEach(function(u){%>
+<% data.forEach(function(u){%>
 <div  class="usersbox">
 <h3 class="userboxname"><%= u.username%></h3>
 </div>
@@ -56,17 +56,17 @@
 
     function incomingMsg(msg) {
 document.querySelector(".messagesbox").innerHTML += `<div class="incomingMsg msg">
-    <div class="username">${msg.username}</div>
-    <div class="chats">${msg.msg}</div>
+  <div class="chats">${msg.msg}</div>
   </div>`
-    }
+}
+// <div class="username">${msg.username}</div>
 
     function outgoingMsg(msg){
       document.querySelector(".messagesbox").innerHTML +=`<div class="outgoingMsg msg">
-    <div class="username">you</div>
-    <div class="chats">${msg}</div>
-  </div>`
-    }
+        <div class="chats">${msg}</div>
+        </div>`
+      }
+      // <div class="username">you</div>
 
 
     function sendMsg(){
@@ -75,7 +75,7 @@ document.querySelector(".messagesbox").innerHTML += `<div class="incomingMsg msg
 
 //    
       const msgpacket = {
-      username: "username" ,
+      // username: "username",
       msg: inputmsg,
     }
 
