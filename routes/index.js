@@ -5,6 +5,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 passport.use(new LocalStrategy(Users.authenticate()));
 const nodemailer = require("nodemailer")
+const email = require("../authenticationhide.js")
 
 /* GET home page. */
 
@@ -69,8 +70,8 @@ function sendmail(req, res, user){
     host: "smtp.gmail.com",
     port: 465,
     auth: {
-      user: "akshitadanewala@gmail.com",
-      pass: "gkev mbhx qjfq zpxf",
+      user: email.gmail,
+      pass: email.pass,
     },
     tls: {
       // do not fail on invalid certs
