@@ -27,7 +27,8 @@
 <div class="chatroom-right">
 
   <div class="namebox">
-    <h1  class="userName"></h1>
+        <h1  class="userName"></h1>
+  
   </div>
 
 
@@ -75,7 +76,7 @@ document.querySelector(".messagesbox").innerHTML += `<div class="incomingMsg msg
 
 //    
       const msgpacket = {
-      // username: "username",
+      username: "username",
       msg: inputmsg,
     }
 
@@ -83,11 +84,14 @@ document.querySelector(".messagesbox").innerHTML += `<div class="incomingMsg msg
     socket.emit("sony", msgpacket)
 
     document.querySelector("input").value = ""
+
     }
 
 
     socket.on("incomingMsg", (msg)=>{
 incomingMsg(msg)
+
+
     })
   
    

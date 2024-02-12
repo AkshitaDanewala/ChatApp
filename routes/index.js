@@ -135,7 +135,7 @@ router.get('/chatroom',  isloggedIn, async function(req, res, next) {
 
   try{
     const user = await Users.find()
-    res.render('chatroom', {admin: req.user, data: user} );
+    res.render('chatroom', {admin: req.user, data: user.reverse()} );
   }catch(err){
     res.send(err)
   }
